@@ -16,9 +16,9 @@ function search() {
         }
         else {
             var body = (gpu + " is in the " + valueShop + " available! " + url + " Don't forget the discount code MONSTER ");
-            Logger.log(response);
+            saveAsJSON(response, gpu);
             mailSend(gpu, body);
-            discordMessageSend(body)
+            discordMessageSend(body);
         }
     }
 }
