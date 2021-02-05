@@ -1,5 +1,3 @@
 function run() {
-
 search();
-
 }

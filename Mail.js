@@ -8,7 +8,5 @@ function mailSend(gpu, body) {
             break;
         }
         GmailApp.sendEmail(recipient, gpu, body)
-
     }
-
 }

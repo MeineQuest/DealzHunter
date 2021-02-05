@@ -15,7 +15,8 @@ function search() {
             Logger.log(gpu + " is not in the " + valueShop + " available! ");
         }
         else {
-            var body = (gpu + " is in the " + valueShop + " available! " + url);
+            var body = (gpu + " is in the " + valueShop + " available! " + url + " Don't forget the discount code MONSTER ");
+            Logger.log(response);
             mailSend(gpu, body);
             discordMessageSend(body)
         }
