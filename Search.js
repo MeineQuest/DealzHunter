@@ -1,6 +1,6 @@
 function search() {
 
-    var webShop = SpreadsheetApp.openById("1ANDzVvEimOsTN-obrJmdNWYZcm4pRJuTLbbLbs6Pgu8").getSheetByName("Web Shops");
+    var webShop = spreadSheetIdWebShop(webShop);
 
     for (var i = 2; i < 50; i++) {
         var url = webShop.getRange(i, 1).getValue();
@@ -16,6 +16,7 @@ function search() {
         }
         else {
             var body = (gpu + " is in the " + valueShop + " available! " + url + " Don't forget the discount code MONSTER ");
+            
             saveAsJSON(response, gpu);
             mailSend(gpu, body);
             discordMessageSend(body);

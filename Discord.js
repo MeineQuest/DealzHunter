@@ -1,6 +1,6 @@
 function discordMessageSend(body) {
 
-  var discordServerHook = SpreadsheetApp.openById("1ANDzVvEimOsTN-obrJmdNWYZcm4pRJuTLbbLbs6Pgu8").getSheetByName("WebHook");
+  var discordServerHook = spreadSheetIdDiscordServerHook(discordServerHook);
   var message = body;
   var payload = JSON.stringify({content: message});
   var params = {
