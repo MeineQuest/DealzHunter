@@ -4,10 +4,11 @@ function apiCall(url) {
     var responseCode = response.getResponseCode()
 
     if (responseCode === 200) {
-      Logger.log("ResponseCode " + response.getResponseCode());
+      //Logger.log("Response Code " + response.getResponseCode());
       return response;
-    } else {
-      Logger.log("Failure ResponseCode " + response.getResponseCode());
+    } else { 
+      Logger.log("Failure Response Code " + response.getResponseCode());
+      return response;
     };
   }
   catch (e) {
